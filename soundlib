@@ -1,0 +1,40 @@
+local allSounds = {}
+local connections = {}
+
+local function resetVolume(sound)
+    if sound.Volume ~= 0 then
+        allSounds[sound] = sound.Volume
+        sound.Volume = 0
+    end
+end
+
+local function checkInstance(object)
+    pcall(function()
+        if object:IsA("Sound") then
+            resetVolume(object)
+            connections[object] = object:GetPropertyChangedSignal("Volume"):Connect(function()
+                resetVolume(object)
+            end)
+        end
+    end)
+end
+
+for _, object in ipairs(game:GetDescendants()) do
+    checkInstance(object)
+end
+
+local soundAdded = game.DescendantAdded:Connect(checkInstance)
+
+-- This is where you put your loading code stuff
+
+wait(10) -- wait for 10 seconds
+
+soundAdded:Disconnect()
+
+for object, connection in pairs(connections) do
+    connection:Disconnect()
+    object.Volume = allSounds[object]
+end
+
+table.clear(allSounds)
+table.clear(connections)
