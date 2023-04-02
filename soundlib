@@ -25,9 +25,8 @@ end
 
 local soundAdded = game.DescendantAdded:Connect(checkInstance)
 
--- This is where you put your loading code stuff
 
-wait(10) -- wait for 10 seconds
+wait(10)
 
 soundAdded:Disconnect()
 
