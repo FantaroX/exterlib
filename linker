@@ -1,5 +1,5 @@
 local script1 = "https://raw.githubusercontent.com/FantaroX/exterlib/main/betterloading"
-local script2 = "https://raw.githubusercontent.com/FantaroX/exterlib/main/petlist"
+local script2 = "https://raw.githubusercontent.com/FantaroX/exterlib/main/megszamolo"
 
 local function loadScript(script)
     local req = syn.request({
