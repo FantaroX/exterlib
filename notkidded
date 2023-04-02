@@ -1,0 +1,69 @@
+-- Create the screen GUI
+local loadingScreenGui = Instance.new("ScreenGui")
+loadingScreenGui.Name = "LoadingScreenGui"
+loadingScreenGui.Parent = game:GetService("CoreGui")
+
+-- Create the main frame
+local mainFrame = Instance.new("Frame")
+mainFrame.Position = UDim2.new(0, 0, 0, 0)
+mainFrame.Size = UDim2.new(1, 0, 1, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+mainFrame.BackgroundTransparency = 0
+mainFrame.BorderColor3 = Color3.new(0,0,0)
+mainFrame.BorderSizePixel = 75
+mainFrame.Parent = loadingScreenGui
+
+-- Create the title label
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Position = UDim2.new(0.5, 0, 0.3, 0)
+titleLabel.Size = UDim2.new(0.5, 0, 0.2, 0)
+titleLabel.AnchorPoint = Vector2.new(0.5, 0)
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextColor3 = Color3.new(0, 0, 0) -- change text color to white
+titleLabel.TextStrokeColor3 = Color3.new(1, 1, 1)
+titleLabel.TextStrokeTransparency = 0
+titleLabel.TextScaled = true
+titleLabel.Text = "ASteroid Hub"
+titleLabel.BackgroundTransparency = 1
+titleLabel.Parent = mainFrame
+
+-- Create the loading bar frame
+local loadingBarFrame = Instance.new("Frame")
+loadingBarFrame.Size = UDim2.new(0.8, 0, 0.05, 0)
+loadingBarFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingBarFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingBarFrame.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+loadingBarFrame.BorderColor3 = Color3.new(0, 0, 0)
+loadingBarFrame.BorderSizePixel = 20
+loadingBarFrame.Parent = mainFrame
+
+-- Create the loading label
+local loadingLabel = Instance.new("TextLabel")
+loadingLabel.Position = UDim2.new(0, 550, 2, 0)
+loadingLabel.Size = UDim2.new(0.3, 0, 1, 0)
+loadingLabel.AnchorPoint = Vector2.new(0, 0.5)
+loadingLabel.Font = Enum.Font.GothamBold
+loadingLabel.TextColor3 = Color3.new(1, 1, 1)
+loadingLabel.TextScaled = true
+loadingLabel.Text = "Loading..."
+loadingLabel.BackgroundTransparency = 1
+loadingLabel.Parent = loadingBarFrame
+
+-- Create the loading bar
+local loadingBar = Instance.new("Frame")
+loadingBar.Size = UDim2.new(0, 0, 1, 0)
+loadingBar.BackgroundColor3 = Color3.new(1, 1, 1)
+loadingBar.BorderSizePixel = 0
+loadingBar.Parent = loadingBarFrame
+
+-- Animate the loading bar
+local duration = 10 -- seconds
+local startTime = tick()
+game:GetService("RunService").Heartbeat:Connect(function()
+    local elapsedTime = tick() - startTime
+    local progress = elapsedTime / duration
+    loadingBar.Size = UDim2.new(progress, 0, 1, 0)
+    if elapsedTime >= duration then
+        loadingScreenGui:Destroy()
+    end
+end)
