@@ -23,7 +23,7 @@ titleLabel.TextColor3 = Color3.new(0, 0, 0) -- change text color to white
 titleLabel.TextStrokeColor3 = Color3.new(1, 1, 1)
 titleLabel.TextStrokeTransparency = 0
 titleLabel.TextScaled = true
-titleLabel.Text = "ASteroid Hub"
+titleLabel.Text = "Huge Crack"
 titleLabel.BackgroundTransparency = 1
 titleLabel.Parent = mainFrame
 
